@@ -16,7 +16,7 @@ export const CartProvider = ({ children }) => {
 
     const totalPay = () => {
 
-        var totalPay = 0;
+        let totalPay = 0;
         cartItems.map((item) => (
             totalPay = totalPay + item.qty * item.price
         ))

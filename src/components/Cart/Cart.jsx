@@ -3,15 +3,13 @@ import React, { useContext } from 'react'
 import { CartContext } from '../../components/Context/CartContext'
 import SadImg from '../../components/img/sad-emoji.png'
 import { Link } from 'react-router-dom'
-
+import  OrderModal  from '../OrderModal'
 
 
 const Cart = () => {
 
     const { cartItems, CartItemsQnt, RemoveItem, totalPay } = useContext(CartContext);
     console.log(cartItems);
-
-
     return (
 
 
@@ -24,9 +22,9 @@ const Cart = () => {
                             CartItemsQnt() !== 0 ?
                                 <Table striped bordered hover responsive>
                                     <thead>
-                                        <tr style={{verticalAlign:'middle'}}>
+                                        <tr style={{ verticalAlign: 'middle' }}>
                                             <th></th>
-                                            <th style={{textAlign:'center'}}>Producto</th>
+                                            <th style={{ textAlign: 'center' }}>Producto</th>
                                             <th>Cantidad</th>
                                             <th>Precio unitario</th>
                                             <th>Precio total</th>
@@ -37,28 +35,28 @@ const Cart = () => {
                                         {
                                             cartItems.map((item, index) => (
                                                 <>
-                                                    <tr style={{verticalAlign:'middle'}}>
+                                                    <tr style={{ verticalAlign: 'middle' }}>
                                                         <td>{index + 1}</td>
                                                         <td><Image src={item.imageURL} style={{ width: '5%', marginRight: 15 }} />{item.name}</td>
-                                                        <td style={{ textAlign: 'center'}}>{item.qty}</td>
-                                                        <td style={{ textAlign: 'center'}}>{item.price}</td>
-                                                        <td style={{ textAlign: 'center'}}>{item.qty * item.price}</td>
-                                                        <td style={{ textAlign: 'center'}}><Button variant="danger" onClick={() => RemoveItem(item)}>X</Button></td>
+                                                        <td style={{ textAlign: 'center' }}>{item.qty}</td>
+                                                        <td style={{ textAlign: 'center' }}>{item.price}</td>
+                                                        <td style={{ textAlign: 'center' }}>{item.qty * item.price}</td>
+                                                        <td style={{ textAlign: 'center' }}><Button variant="danger" onClick={() => RemoveItem(item)}>X</Button></td>
                                                     </tr>
                                                 </>
                                             ))
                                         }
-                                        <tr style={{verticalAlign:'middle'}}>
+                                        <tr style={{ verticalAlign: 'middle' }}>
                                             <td></td>
                                             <td></td>
                                             <td></td>
-                                            <td style={{ textAlign: 'center', fontWeight:'bold' }}>Total</td>
-                                            <td style={{ textAlign: 'center', fontWeight:'bold' }}>
+                                            <td style={{ textAlign: 'center', fontWeight: 'bold' }}>Total</td>
+                                            <td style={{ textAlign: 'center', fontWeight: 'bold' }}>
                                                 {
                                                     totalPay()
                                                 }
                                             </td>
-                                            <td  style={{ textAlign: 'center', fontWeight:'bold' }}><Button variant="success">Pagar</Button></td>
+                                            <td style={{ textAlign: 'center', fontWeight: 'bold' }}><OrderModal/></td>
                                         </tr>
 
 
@@ -68,7 +66,7 @@ const Cart = () => {
                                     <Container>
                                         <Row>
                                             <Col xs={12}>
-                                                <Image src={SadImg} style={{ width: '20%', marginRight: 15, marginBottom: 30,marginTop:20 }} />
+                                                <Image src={SadImg} style={{ width: '20%', marginRight: 15, marginBottom: 30, marginTop: 20 }} />
                                             </Col>
                                             <Col xs={12} style={{ marginBottom: 20 }}>
                                                 <h3>Nada en el carrito... aun.</h3>

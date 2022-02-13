@@ -8,6 +8,7 @@ import Cart from './components/Cart/Cart'
 import Categories from './components/Category/Categories';
 import Category from './components/Category/Category';
 import { CartProvider } from './components/Context/CartContext';
+import OrderModal from './components/OrderModal';
 
 const App = () => {
 
@@ -22,6 +23,7 @@ const App = () => {
             <Route path="/cart" exact element={<Cart />} />
             <Route path="/category/:id" element={<Category />} />
             <Route path="/categories" element={<Categories />} />
+            <Route path="/ordermodal" element={<OrderModal />} />
           </Route>
         </Routes>
       </BrowserRouter>
