@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom"
 import { getProductDescription, getProductDetail } from '../../services/Products';
-import { CartProvider } from "../Context/CartContext";
+import { getDocFromFirebase } from "../../services/Products";
 import ItemDetail from "./ItemDetail";
 
 const ItemDetailContainer = () => {
@@ -10,11 +10,8 @@ const ItemDetailContainer = () => {
 
     useEffect(() => {
         let mounted = true
-        Promise.all([getProductDetail(id), getProductDescription(id)])
-            .then(results => {
-                console.log("Mostrando resultados ", results)
-                let item = results[0]
-                item.description = results[1].plain_text
+        getDocFromFirebase(id)
+            .then(item => {
                 if (mounted) {
                     setProduct(item)
                 }
@@ -24,10 +21,9 @@ const ItemDetailContainer = () => {
 
     return (
         <>
-            <div className="item-detail-container">
+            <div className="item-detail-container" style={{marginTop:20}}> 
                 {product ?
-                        <ItemDetail item={product} />
-
+                        <ItemDetail item={product} id={id} />
                     : null}
             </div>
 

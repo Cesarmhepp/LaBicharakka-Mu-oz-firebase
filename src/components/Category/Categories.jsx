@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
-import {  useNavigate } from 'react-router-dom';
-import { getCategories } from '../../services/Products';
+import { useNavigate } from 'react-router-dom';
+import { getCategoriesFromFirebase } from '../../services/Products';
 import { Button, Card, Col, Row } from 'react-bootstrap';
 
 const Categories = () => {
@@ -9,7 +9,7 @@ const Categories = () => {
 
     useEffect(() => {
         let mounted = true
-        getCategories("MLC").then(results => {
+        getCategoriesFromFirebase().then(results => {
             if (mounted) {
                 setCategories(results)
             }
@@ -21,10 +21,10 @@ const Categories = () => {
         <Row>
             {categories.map(category => {
                 return (
-                    <Col xs={3}  style={{marginTop:10, marginBottom:10}}>
+                    <Col xs={3} style={{ marginTop: 10, marginBottom: 10 }}>
                         <Card className="card bg-details">
-                            <Card.Title style={{ height: 80, paddingTop: 5 }}>{category.name}</Card.Title>
-                            <Button variant="warning" onClick={() => navigate(`/category/${category.id}`)}>Ver Catalogo</Button>
+                            <Card.Title style={{ height: 80, paddingTop: 5 }}>{category.data().name}</Card.Title>
+                            <Button variant="warning" onClick={() => navigate(`/category/${category.data().name}`)}>Ver Catalogo</Button>
                         </Card>
                     </Col>
                 )

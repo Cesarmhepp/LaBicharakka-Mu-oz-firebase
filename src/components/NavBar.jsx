@@ -1,6 +1,6 @@
 import { Navbar, Nav, Container, Form, FormControl, Button, NavDropdown } from 'react-bootstrap'
 import React from 'react'
-import logo from './img/logo2.png'
+import logo from './img/logoBicharakka.png'
 import { BsSearch } from 'react-icons/bs';
 import ModalLogin from './ModalLogin'
 import CardWidjet from './Cart/CardWidjet'
@@ -11,9 +11,7 @@ const NavBar = ({ categories }) => {
 
     const onSearchChange = (event) => {
         event.preventDefault();
-        console.log(event.target.value)
     }
-
     return <>
 
         <Navbar className='border-bottom bg-details' sticky='top'>
@@ -39,8 +37,8 @@ const NavBar = ({ categories }) => {
                             return (
                                 <NavDropdown.Item key={category.id}
                                     as={Link}
-                                    to={`/category/${category.id}`}>
-                                    {category.name}
+                                    to={`/category/${category.data().name}`}>
+                                    {category.data().name}
                                 </NavDropdown.Item>)
                         })}
                         <NavDropdown.Item as={Link} to={`/categories`}>Ver todas</NavDropdown.Item>
@@ -60,7 +58,7 @@ const NavBar = ({ categories }) => {
 
                 </Nav>
 
-                    <CardWidjet />
+                <CardWidjet />
 
                 <ModalLogin />
             </Container>

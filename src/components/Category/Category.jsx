@@ -1,19 +1,19 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductsFromCategory } from '../../services/Products';
+import { getDocsByCategoryFromFirebase } from '../../services/Products';
 import ItemListContainer from '../../components/Items/ItemListContainer';
 
 const Category = () => {
 
   const [products, setProducts] = useState([])
-  const { id } = useParams();
-
+  const  {id}  = useParams();
   useEffect(() => {
     let mounted = true
     if (typeof id !== 'undefined') {    
-        getProductsFromCategory("MLC", id).then(items => {
+      getDocsByCategoryFromFirebase(id).then(items => {
             if(mounted) {
-                setProducts(items.results)
+              setProducts(items)
+                console.log("log desde categoria",items)
             }
           })          
     }

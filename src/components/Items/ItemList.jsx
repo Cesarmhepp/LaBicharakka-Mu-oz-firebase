@@ -4,7 +4,8 @@ import Item from './Item'
 const ItemList = ({ products }) => {
     return (
         <>
-            {products.map((product) => (
+           {
+             products.map((product)=>(
                 <Col key={product.id}>
                     <Item product={product}/>
                 </Col>
@@ -14,3 +15,24 @@ const ItemList = ({ products }) => {
 }
 
 export default ItemList
+
+
+
+/* {  {products.map((product) => (
+     <Col key={product.id}>
+         <Item product={product}/>
+     </Col>
+ ))} 
+
+ 
+ 
+  products.forEach((product)=>{
+     <Col key={product.id}>
+         <Item product={product}/>
+     </Col>
+ }) 
+ 
+ } */
+
+
+

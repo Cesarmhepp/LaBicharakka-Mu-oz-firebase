@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 
 
 
-const Cart = ({ quantityToAdd }) => {
+const Cart = () => {
 
     const { cartItems, CartItemsQnt, RemoveItem, totalPay } = useContext(CartContext);
     console.log(cartItems);
@@ -39,7 +39,7 @@ const Cart = ({ quantityToAdd }) => {
                                                 <>
                                                     <tr style={{verticalAlign:'middle'}}>
                                                         <td>{index + 1}</td>
-                                                        <td><Image src={item.pictures[0].secure_url} style={{ width: '5%', marginRight: 15 }} />{item.title}</td>
+                                                        <td><Image src={item.imageURL} style={{ width: '5%', marginRight: 15 }} />{item.name}</td>
                                                         <td style={{ textAlign: 'center'}}>{item.qty}</td>
                                                         <td style={{ textAlign: 'center'}}>{item.price}</td>
                                                         <td style={{ textAlign: 'center'}}>{item.qty * item.price}</td>
