@@ -21,7 +21,9 @@ Cuenta de Firebase con google
 ### Instalación 🔧
 
 Guia de comandos para iniciar el proyecto.
+```
 npm install
+```
 
 
 ## Construido con 🛠️
