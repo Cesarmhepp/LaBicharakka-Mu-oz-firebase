@@ -18,21 +18,3 @@ export default ItemList
 
 
 
-/* {  {products.map((product) => (
-     <Col key={product.id}>
-         <Item product={product}/>
-     </Col>
- ))} 
-
- 
- 
-  products.forEach((product)=>{
-     <Col key={product.id}>
-         <Item product={product}/>
-     </Col>
- }) 
- 
- } */
-
-
-

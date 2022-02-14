@@ -1,11 +1,11 @@
-import { Button, Container, Form, Modal } from 'react-bootstrap'
+import { Button, Form, Modal } from 'react-bootstrap'
 import React, { useContext, useState } from 'react'
 import { CartContext } from './Context/CartContext';
 import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../firebase'
 
 const OrderModal = () => {
-    const { cartItems, CartItemsQnt, totalPay } = useContext(CartContext);
+    const { cartItems, totalPay } = useContext(CartContext);
 
     const [smShow, setSmShow] = useState(false);
     const [name, setName] = useState("");
@@ -32,11 +32,10 @@ const OrderModal = () => {
     const createOrder = () => {
         addDoc(collection(db, "orders"), order)
             .then(doc => {
-                console.log("La orden de compra a sido creada correctamente, su codigo de seg es: ", doc.id)
-                alert("Su orden de compra a sido generada, su codigo de seguimiento es: "+doc.id)
+                alert("Su orden de compra a sido generada, su codigo de seguimiento es: " + doc.id)
                 setSmShow(false)
             })
-            .catch(err => { console.log("Ha ocurrido un error: ", err); alert("Ha ocurrido un error al generar la compra, intentelo mas tarde.") })
+            .catch(err => { alert("Ha ocurrido un error al generar la compra, intentelo mas tarde.") })
     }
 
     return (
@@ -49,7 +48,7 @@ const OrderModal = () => {
                 onHide={() => setSmShow(false)}
                 aria-labelledby="example-modal-sizes-title-lg"
             >
-                <Modal.Header closeButton>
+                <Modal.Header closeButton className='bg-btn'>
                     <Modal.Title id="example-modal-sizes-title-lg">
                         Orden de compra
                     </Modal.Title>
@@ -58,7 +57,7 @@ const OrderModal = () => {
                     <Form>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
                             <Form.Label>Nombre</Form.Label>
-                            <Form.Control onChange={event => setName(event.target.value)} type="email" placeholder="Enter email" />
+                            <Form.Control onChange={event => setName(event.target.value)} type="email" placeholder="Juan Perez" />
 
                         </Form.Group>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -72,15 +71,16 @@ const OrderModal = () => {
                             <Form.Label>Número de contacto</Form.Label>
                             <Form.Control onChange={event => setPhone(event.target.value)} type="phone" />
                         </Form.Group>
-                        <Button variant="warning" style={{ marginRight: 5 }} onClick={()=>setSmShow(false)}>
-                            Cancelar
-                        </Button>
-                        <Button variant="primary" onClick={() => createOrder()}>
-                            Ordenar
-                        </Button>
                     </Form>
-
                 </Modal.Body>
+                <Modal.Footer className='bg-btn'>
+                    <Button variant="warning" style={{ marginRight: 5 }} onClick={() => setSmShow(false)}>
+                        Cancelar
+                    </Button>
+                    <Button variant="success" onClick={() => createOrder()}>
+                        Ordenar
+                    </Button>
+                </Modal.Footer>
             </Modal>
         </>
 

@@ -2,6 +2,8 @@
   text-align: center;
 }
 
+
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -79,9 +81,6 @@ background-size: 40px 60px;
 .bg-details{
   background-image: url("../bg_bggenerator_com.png");
 }
-
-
-
 
 txt-size{
   font-size: calc(10px + 2vmin);

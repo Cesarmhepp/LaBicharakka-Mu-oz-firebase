@@ -7,17 +7,14 @@ const ItemDetail = ({ item, id }) => {
 	const [itemsQty, setItemsQty] = useState(1);
 	const [show, setShow] = useState(false)
 	item.id = id;
+
 	const onAdd = ({ quantityToAdd }) => {
 		return (
 			<Link to={"/cart"}><Cart quantityToAdd={quantityToAdd} /></Link>
 		)
 	}
 
-	const { AddItem, isInCart, cartItems } = useContext(CartContext);
-
-	console.log("Lista en el carrito: ", cartItems)
-
-
+	const { addItem } = useContext(CartContext);
 	return (
 		<>
 			<Row style={{ marginLeft: 100, marginRight: 100 }}>
@@ -44,37 +41,16 @@ const ItemDetail = ({ item, id }) => {
 					</Table>
 
 					<Button style={{ marginRight: 10 }} variant="warning" onClick={() => itemsQty > 1 ? setItemsQty(itemsQty - 1) : null}> - </Button>
-					<a>
+					<a href="/#" style={{ textDecoration: 'none', color:'black' }}>
 						{itemsQty}
 					</a>
 					<Button style={{ marginLeft: 10 }} variant="warning" onClick={() => itemsQty < item.stock ? setItemsQty(itemsQty + 1) : null}> + </Button>
 
-					<Button style={{ marginLeft: 10 }} variant="primary" onClick={() => { AddItem(item, itemsQty); setShow(true) }}> Añadir</Button>
+					<Button style={{ marginLeft: 10 }} variant="primary" onClick={() => { addItem(item, itemsQty); setShow(true) }}> Añadir</Button>
 
 					{
 						show ? <Link to={"/cart"}><Button style={{ marginLeft: 10 }} variant='primary' onClick={() => onAdd(itemsQty)}>Finalizar</Button> </Link> : null
 					}
-
-
-					{/* <Col xs={12} style={{ textAlign: "left", marginTop: 50 }}>
-						<h5>Caracteristicas</h5>
-						<Table size="sm" responsive>
-							<tbody>
-								{attributes.slice(0, 9).map(attribute => {
-									return (
-										<>
-											<tr>
-												<td>{attribute.name}</td>
-												<td>{attribute.value_name}</td>
-											</tr>
-										</>
-									)
-								})}
-							</tbody>
-						</Table>
-
-					</Col> */}
-
 				</Col>
 
 

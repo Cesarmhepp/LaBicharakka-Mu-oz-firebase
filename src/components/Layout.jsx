@@ -5,7 +5,6 @@ import { Outlet } from "react-router-dom";
 import { getCategoriesFromFirebase } from "../services/Products";
 
 const Layout = () => {
-    const [loading, setLoading] = useState(false);
     const [categories,setCategories]=useState([])
 
     useEffect(() => {

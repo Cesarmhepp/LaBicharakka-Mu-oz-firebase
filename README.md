@@ -1,70 +1,65 @@
-# Getting Started with Create React App
+# La Bicharraka
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este proyecto es el resultado de el curso realizado por coderHouse entre diciembre del 2021 hasta febrero del 2022. en el cual se podra reflejar todo lo aprendido
+en dicho curso
 
-## Available Scripts
+## Comenzando 🚀
+Desde la Terminal windows, en la ruta de escritorio, escribes el siguiente comando:
+git clone https://github.com/Cesarmhepp/LaBicharakka-Mu-oz
+O simplemente de a la url https://github.com/Cesarmhepp/LaBicharakka-Mu-oz y descargas en formato ZIP (Esta opcion no incluira las conexion con GitHub para commits, pull, etc.)
 
-In the project directory, you can run:
+### Pre-requisitos 📋
 
-### `npm start`
+Cuenta de Firebase con google
+-NodeJS
+-React ^17.0.2
+-Git
+-Visual Code (Opcional)
+-ECMA 6
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Instalación 🔧
 
-### `npm test`
+Guia de comandos para iniciar el proyecto.
+npm install
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### practicas utilizadas  ⌨️
+-Camel Case
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Despliegue 📦
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+_Agrega notas adicionales sobre como hacer deploy_
 
-### `npm run eject`
+## Construido con 🛠️
+```
+* [React-Bootstrap](https://react-bootstrap.github.io/) - El framework web usado para diseño
+* [Github](https://GitHub.org/) - Manejador de dependencias
+* [FireBase](https://firebase.google.com/) - Servicio en la nube
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Contribuyendo 🖇️
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+_Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Versionado 📌
 
-## Learn More
+_Usamos [GitHub](http://github.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/CesarmheppLaBicharakka-Mu-oz/tags).
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Autores ✒️
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+* **César Muñoz Hepp** - *Trabajo Inicial* - [cesarmhepp](https://gist.github.com/Cesarmhepp)
+* **César Muñoz Hepp** - *Documentación* - [cesarmhepp](#fulanito-de-tal)
 
-### Code Splitting
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Expresiones de Gratitud 🎁
 
-### Making a Progressive Web App
+* Comenta a otros sobre este proyecto 📢
+* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
+* Da las gracias públicamente 🤓.
+* etc.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

@@ -8,8 +8,7 @@ import  OrderModal  from '../OrderModal'
 
 const Cart = () => {
 
-    const { cartItems, CartItemsQnt, RemoveItem, totalPay } = useContext(CartContext);
-    console.log(cartItems);
+    const { cartItems, cartItemsQnt, removeItem, totalPay } = useContext(CartContext);
     return (
 
 
@@ -19,7 +18,7 @@ const Cart = () => {
                     <Col>
 
                         {
-                            CartItemsQnt() !== 0 ?
+                            cartItemsQnt() !== 0 ?
                                 <Table striped bordered hover responsive>
                                     <thead>
                                         <tr style={{ verticalAlign: 'middle' }}>
@@ -41,7 +40,7 @@ const Cart = () => {
                                                         <td style={{ textAlign: 'center' }}>{item.qty}</td>
                                                         <td style={{ textAlign: 'center' }}>{item.price}</td>
                                                         <td style={{ textAlign: 'center' }}>{item.qty * item.price}</td>
-                                                        <td style={{ textAlign: 'center' }}><Button variant="danger" onClick={() => RemoveItem(item)}>X</Button></td>
+                                                        <td style={{ textAlign: 'center' }}><Button variant="danger" onClick={() => removeItem(item)}>X</Button></td>
                                                     </tr>
                                                 </>
                                             ))

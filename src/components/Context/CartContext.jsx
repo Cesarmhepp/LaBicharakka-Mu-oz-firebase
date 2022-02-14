@@ -5,7 +5,7 @@ export const CartContext = createContext();
 export const CartProvider = ({ children }) => {
     const [cartItems, setCartItems] = useState([])
 
-    const CartItemsQnt = () => {
+    const cartItemsQnt = () => {
         var qty = 0;
         cartItems.map((item) => (
             qty = qty + item.qty
@@ -24,8 +24,7 @@ export const CartProvider = ({ children }) => {
         return totalPay
     }
 
-    const AddItem = (product, qty) => {
-        console.log("Cantidad ingresada " + qty)
+    const addItem = (product, qty) => {
         product.qty = qty
         var isAlreadyIn = false;
 
@@ -38,10 +37,10 @@ export const CartProvider = ({ children }) => {
             }
         }
 
-        isAlreadyIn ? console.log("El articulo ya esta en el carrito") : setCartItems([...cartItems, product])
+        isAlreadyIn ? alert("El articulo ya esta en el carrito") : setCartItems([...cartItems, product])
     }
 
-    const RemoveItem = (product) => {
+    const removeItem = (product) => {
         setCartItems(cartItems.filter(item => item.id !== product.id))
     }
 
@@ -63,7 +62,7 @@ export const CartProvider = ({ children }) => {
 
 
     return (
-        <CartContext.Provider value={{ cartItems, CartItemsQnt, AddItem, RemoveItem, clear, isInCart, totalPay }}>
+        <CartContext.Provider value={{ cartItems, cartItemsQnt, addItem, removeItem, clear, isInCart, totalPay }}>
             {children}
         </CartContext.Provider>
     )

@@ -13,7 +13,6 @@ const Category = () => {
       getDocsByCategoryFromFirebase(id).then(items => {
             if(mounted) {
               setProducts(items)
-                console.log("log desde categoria",items)
             }
           })          
     }
