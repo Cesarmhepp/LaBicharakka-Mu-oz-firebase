@@ -12,7 +12,7 @@ const CardWidjet = () => {
         <Link to={"/cart"}>
             <Button variant="warning">
                 <BsCart2 />
-                <a href="/#" style={{ marginLeft: 3, textDecoration: 'none', color:'black' }}>{cartItemsQnt()}</a>
+                <b style={{ marginLeft: 3, textDecoration: 'none', color:'black' }}>{cartItemsQnt()}</b>
             </Button>
         </Link>
 
