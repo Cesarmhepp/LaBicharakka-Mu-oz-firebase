@@ -23,30 +23,19 @@ Cuenta de Firebase con google
 Guia de comandos para iniciar el proyecto.
 npm install
 
-### practicas utilizadas  ⌨️
--Camel Case
-
-
-
-## Despliegue 📦
-
-_Agrega notas adicionales sobre como hacer deploy_
 
 ## Construido con 🛠️
-```
+_Lista de las herramientas utilizadas para la creacion de este proyecto_
 * [React-Bootstrap](https://react-bootstrap.github.io/) - El framework web usado para diseño
 * [Github](https://GitHub.org/) - Manejador de dependencias
 * [FireBase](https://firebase.google.com/) - Servicio en la nube
-```
 
-## Contribuyendo 🖇️
 
-_Por favor lee el [CONTRIBUTING.md](https://gist.github.com/villanuevand/xxxxxx) para detalles de nuestro código de conducta, y el proceso para enviarnos pull requests.
 
 
 ## Versionado 📌
 
-_Usamos [GitHub](http://github.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/CesarmheppLaBicharakka-Mu-oz/tags).
+Usamos [GitHub](http://github.org/) para el versionado. Para todas las versiones disponibles, mira los [tags en este repositorio](https://github.com/CesarmheppLaBicharakka-Mu-oz/tags).
 
 ## Autores ✒️
 
@@ -59,7 +48,5 @@ _Usamos [GitHub](http://github.org/) para el versionado. Para todas las versione
 ## Expresiones de Gratitud 🎁
 
 * Comenta a otros sobre este proyecto 📢
-* Invita una cerveza 🍺 o un café ☕ a alguien del equipo. 
-* Da las gracias públicamente 🤓.
-* etc.
+* Doy las gracias por interesante en este proyecto 🤓.
 
