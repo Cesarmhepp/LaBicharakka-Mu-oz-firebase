@@ -18,8 +18,9 @@ O simplemente de a la url https://github.com/Cesarmhepp/LaBicharakka-Mu-oz y des
 _Guia de comandos para iniciar el proyecto._
 ```
 npm install
+npm start
 ```
-_Cabe agregar que este proyecto usaremos firebase con su recpetivo archivo de variables de entorno, para ello, sera necesario crear un archivo .env en la raiz
+_Cabe agregar que este proyecto usaremos firebase con su respectivo archivo de variables de entorno, para ello, sera necesario crear un archivo .env en la raiz
 con las variables que se utilizen en el codigo de firebase._
 
 ```
