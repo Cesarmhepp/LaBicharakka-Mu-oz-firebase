@@ -9,14 +9,9 @@ git clone https://github.com/Cesarmhepp/LaBicharakka-Mu-oz
 O simplemente de a la url https://github.com/Cesarmhepp/LaBicharakka-Mu-oz y descargas en formato ZIP (Esta opcion no incluira las conexion con GitHub para commits, pull, etc.)
 
 ### Pre-requisitos 📋
-
-Cuenta de Firebase con google
--NodeJS
--React ^17.0.2
--Git
--Visual Code (Opcional)
--ECMA 6
-
+* [Node Js](https://nodejs.org/)
+* [React Js](https://es.reactjs.org/)
+* [ECMA 6](https://es.wikipedia.org/wiki/ECMAScript)
 
 ### Instalación 🔧
 
@@ -42,7 +37,7 @@ Usamos [GitHub](http://github.org/) para el versionado. Para todas las versiones
 ## Autores ✒️
 
 * **César Muñoz Hepp** - *Trabajo Inicial* - [cesarmhepp](https://gist.github.com/Cesarmhepp)
-* **César Muñoz Hepp** - *Documentación* - [cesarmhepp](#fulanito-de-tal)
+* **César Muñoz Hepp** - *Documentación* - [cesarmhepp](https://gist.github.com/Cesarmhepp)
 
 
 
