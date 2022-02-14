@@ -19,6 +19,19 @@ _Guia de comandos para iniciar el proyecto._
 ```
 npm install
 ```
+_Cabe agregar que este proyecto usaremos firebase con su recpetivo archivo de variables de entorno, para ello, sera necesario crear un archivo .env en la raiz
+con las variables que se utilizen en el codigo de firebase._
+
+```
+REACT_APP_FIREBASE_API_KEY ="*ApiKey*"
+REACT_APP_FIREBASE_AUTH_DOMAIN="*authDomain*"
+REACT_APP_FIREBASE_PROYECT_ID="*proyectId*"
+REACT_APP_FIREBASE_STORAGE_BUCKET="*storageBucket"
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID="*senderId*"
+REACT_APP_FIREBASE_APP_ID="AppId"
+
+```
+
 
 
 ## Construido con 🛠️
