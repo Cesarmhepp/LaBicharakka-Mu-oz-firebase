@@ -30,12 +30,12 @@ const Cart = () => {
                                         cartItems.map((item, index) => (
                                             <>
                                                 <tr style={{ verticalAlign: 'middle' }} key={index} >
-                                                    <td key={1}>{index + 1}</td>
-                                                    <td key={2}><Image src={item.imageURL} style={{ width: '5%', marginRight: 15 }} />{item.name}</td>
-                                                    <td key={3} style={{ textAlign: 'center' }}>{item.qty}</td>
-                                                    <td key={4} style={{ textAlign: 'center' }}>{item.price}</td>
-                                                    <td key={5} style={{ textAlign: 'center' }}>{item.qty * item.price}</td>
-                                                    <td key={6} style={{ textAlign: 'center' }}><Button variant="danger" onClick={() => removeItem(item)}>X</Button></td>
+                                                    <td>{index + 1}</td>
+                                                    <td><Image src={item.imageURL} style={{ width: '5%', marginRight: 15 }} />{item.name}</td>
+                                                    <td style={{ textAlign: 'center' }}>{item.qty}</td>
+                                                    <td style={{ textAlign: 'center' }}>{item.price}</td>
+                                                    <td style={{ textAlign: 'center' }}>{item.qty * item.price}</td>
+                                                    <td style={{ textAlign: 'center' }}><Button variant="danger" onClick={() => removeItem(item)}>X</Button></td>
                                                 </tr>
                                             </>
                                         ))

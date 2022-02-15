@@ -12,7 +12,8 @@ const NavBar = ({ categories }) => {
     const onSearchChange = (event) => {
         event.preventDefault();
     }
-    return <>
+
+    return (
 
         <Navbar className='border-bottom bg-details' sticky='top'>
 
@@ -61,7 +62,7 @@ const NavBar = ({ categories }) => {
                 <ModalLogin />
             </Container>
         </Navbar>
-    </>
+    )
 }
 
 export default NavBar
