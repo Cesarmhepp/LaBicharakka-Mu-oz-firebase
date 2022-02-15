@@ -4,6 +4,7 @@ import { CartContext } from '../../components/Context/CartContext'
 import SadImg from '../../components/img/sad-emoji.png'
 import { Link } from 'react-router-dom'
 import OrderModal from '../OrderModal'
+import CartItem from './CartItem'
 
 const Cart = () => {
     const { cartItems, cartItemsQnt, removeItem, totalPay } = useContext(CartContext);
@@ -28,16 +29,7 @@ const Cart = () => {
 
                                     {
                                         cartItems.map((item, index) => (
-                                            <>
-                                                <tr style={{ verticalAlign: 'middle' }} key={index} >
-                                                    <td>{index + 1}</td>
-                                                    <td><Image src={item.imageURL} style={{ width: '5%', marginRight: 15 }} />{item.name}</td>
-                                                    <td style={{ textAlign: 'center' }}>{item.qty}</td>
-                                                    <td style={{ textAlign: 'center' }}>{item.price}</td>
-                                                    <td style={{ textAlign: 'center' }}>{item.qty * item.price}</td>
-                                                    <td style={{ textAlign: 'center' }}><Button variant="danger" onClick={() => removeItem(item)}>X</Button></td>
-                                                </tr>
-                                            </>
+                                            <CartItem item={item} index={index} removeItem={removeItem} key={index}/>
                                         ))
                                     }
                                     <tr style={{ verticalAlign: 'middle' }}>
