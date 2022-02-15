@@ -16,18 +16,16 @@ const NavBar = ({ categories }) => {
 
         <Navbar className='border-bottom bg-details' sticky='top'>
 
-            <Container container-fluid>
+            <Container fluid>
+                <Navbar.Brand href="#home" as={Link} to="/">
+                    <img
+                        alt=""
+                        src={logo}
+                        width="300"
+                        className="d-inline-block align-top"
+                    />{' '}
+                </Navbar.Brand>
 
-                <Link to={"/"}>
-                    <Navbar.Brand href="#home">
-                        <img
-                            alt=""
-                            src={logo}
-                            width="300"
-                            className="d-inline-block align-top"
-                        />{' '}
-                    </Navbar.Brand>
-                </Link>
 
                 <Nav className="me-auto">
                     <NavLink to="/" className="nav-link">Inicio</NavLink>

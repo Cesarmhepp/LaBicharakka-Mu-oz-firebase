@@ -26,18 +26,8 @@ export const CartProvider = ({ children }) => {
 
     const addItem = (product, qty) => {
         product.qty = qty
-        var isAlreadyIn = false;
-
-        for (let i = 0; i < cartItems.length; i++) {
-            if (qty > 0 && qty !== null) {
-                if (cartItems[i].id === product.id) {
-                    isAlreadyIn = true;
-                    break;
-                }
-            }
-        }
-
-        isAlreadyIn ? alert("El articulo ya esta en el carrito") : setCartItems([...cartItems, product])
+        const found = cartItems.find(element => element.id ===product.id);
+        found!==undefined ? alert("El articulo ya esta en el carrito") : setCartItems([...cartItems, product])
     }
 
     const removeItem = (product) => {

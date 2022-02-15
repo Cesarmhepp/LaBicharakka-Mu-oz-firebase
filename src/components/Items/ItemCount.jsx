@@ -11,9 +11,9 @@ const ItemCount = ({ stock, itemsQty, setItemsQty, onAdd }) => {
     return <>
 
         <Button style={{ marginRight: 10 }} variant="warning" onClick={() => itemsQty > 0 ? setItemsQty(itemsQty - 1) : null}> - </Button>
-        <a>
+        <b>
             {itemsQty}
-        </a>
+        </b>
         <Button style={{ marginLeft: 10 }} variant="warning" onClick={() => itemsQty < stock ? setItemsQty(itemsQty + 1) : null}> + </Button>
         {
             show ? <Link to={"/cart"}><Button style={{ marginLeft: 10 }} variant='primary' onClick={() => onAdd(itemsQty)}>Finalizar</Button> </Link> : null

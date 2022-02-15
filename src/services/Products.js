@@ -1,7 +1,7 @@
 import { collection, getDocs, query, where, getDoc, doc } from 'firebase/firestore'
 import { db } from '../firebase'
 
-
+/* 
 export const getProductsFromCategory = (site, category) => {
     return fetch(`https://api.mercadolibre.com/sites/${site}/search?category=${category}`)
         .then(data => data.json())
@@ -20,7 +20,7 @@ export const getProductDescription = (id) => {
 export const getCategories = (site) => {
     return fetch(`https://api.mercadolibre.com/sites/${site}/categories`)
         .then(data => data.json())
-}
+} */
 
 export const getFromFirebase = async () => {
     // const query = collection(db, "items")

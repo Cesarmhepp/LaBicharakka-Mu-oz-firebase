@@ -8,7 +8,7 @@ const Home = () => {
 
   useEffect(() => {
     let mounted = true;
-    getFromFirebase().then(items => {
+    getFromFirebase().then(async items => {
       if (mounted) {
         setProducts(items)
         setTimeout(() => {

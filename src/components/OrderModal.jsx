@@ -5,7 +5,7 @@ import { addDoc, collection, Timestamp } from 'firebase/firestore';
 import { db } from '../firebase'
 
 const OrderModal = () => {
-    const { cartItems, totalPay } = useContext(CartContext);
+    const { cartItems, totalPay, clear } = useContext(CartContext);
 
     const [smShow, setSmShow] = useState(false);
     const [name, setName] = useState("");
@@ -77,11 +77,11 @@ const OrderModal = () => {
                     <Button variant="warning" style={{ marginRight: 5 }} onClick={() => setSmShow(false)}>
                         Cancelar
                     </Button>
-                    <Button variant="success" onClick={() => createOrder()}>
-                        Ordenar
-                    </Button>
-                </Modal.Footer>
-            </Modal>
+                    <Button variant="success" onClick={() => {createOrder(); clear()}}>
+                    Ordenar
+                </Button>
+            </Modal.Footer>
+        </Modal>
         </>
 
     )
